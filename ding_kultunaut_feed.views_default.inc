@@ -165,6 +165,8 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_location_thoroughfare']['label'] = 'at street';
   $handler->display->display_options['fields']['field_ding_event_location_thoroughfare']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_location_thoroughfare']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_location_thoroughfare']['empty'] = '[field_ding_library_addresse_thoroughfare]';
+  $handler->display->display_options['fields']['field_ding_event_location_thoroughfare']['hide_alter_empty'] = FALSE;
   /* Field: Content: Location - Postal code */
   $handler->display->display_options['fields']['field_ding_event_location_postal_code']['id'] = 'field_ding_event_location_postal_code';
   $handler->display->display_options['fields']['field_ding_event_location_postal_code']['table'] = 'field_data_field_ding_event_location';
@@ -172,6 +174,8 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_location_postal_code']['label'] = 'at zip';
   $handler->display->display_options['fields']['field_ding_event_location_postal_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_location_postal_code']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_location_postal_code']['empty'] = '[field_ding_library_addresse_postal_code]';
+  $handler->display->display_options['fields']['field_ding_event_location_postal_code']['hide_alter_empty'] = FALSE;
   /* Field: Content: Location - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_ding_event_location_locality']['id'] = 'field_ding_event_location_locality';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['table'] = 'field_data_field_ding_event_location';
@@ -179,6 +183,8 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_location_locality']['label'] = 'at town';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_location_locality']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_location_locality']['empty'] = '[field_ding_library_addresse_locality]';
+  $handler->display->display_options['fields']['field_ding_event_location_locality']['hide_alter_empty'] = FALSE;
   /* Field: Content: Phone number */
   $handler->display->display_options['fields']['field_ding_library_phone_number_1']['id'] = 'field_ding_library_phone_number_1';
   $handler->display->display_options['fields']['field_ding_library_phone_number_1']['table'] = 'field_data_field_ding_library_phone_number';
@@ -278,8 +284,11 @@ function ding_kultunaut_feed_views_default_views() {
     t('bibtown'),
     t('bibphone'),
     t('at street'),
+    t('[field_ding_library_addresse_thoroughfare]'),
     t('at zip'),
+    t('[field_ding_library_addresse_postal_code]'),
     t('at town'),
+    t('[field_ding_library_addresse_locality]'),
     t('at phone'),
     t('list image'),
     t('long description'),
