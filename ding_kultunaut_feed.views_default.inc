@@ -176,7 +176,6 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_location_locality']['id'] = 'field_ding_event_location_locality';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['table'] = 'field_data_field_ding_event_location';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['field'] = 'field_ding_event_location_locality';
-  $handler->display->display_options['fields']['field_ding_event_location_locality']['relationship'] = 'og_membership_related_node_group';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['label'] = 'at town';
   $handler->display->display_options['fields']['field_ding_event_location_locality']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_location_locality']['element_default_classes'] = FALSE;
