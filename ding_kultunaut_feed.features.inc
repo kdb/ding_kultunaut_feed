@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * ding_kultunaut_feed.features.inc
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function ding_kultunaut_feed_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function ding_kultunaut_feed_views_api() {
+  return array("api" => "3.0");
+}
