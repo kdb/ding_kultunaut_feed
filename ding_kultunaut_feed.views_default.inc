@@ -209,6 +209,29 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_body']['label'] = 'long description';
   $handler->display->display_options['fields']['field_ding_event_body']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_ding_event_body']['element_label_colon'] = FALSE;
+  /* Field: Content: Target */
+  $handler->display->display_options['fields']['field_ding_event_target']['id'] = 'field_ding_event_target';
+  $handler->display->display_options['fields']['field_ding_event_target']['table'] = 'field_data_field_ding_event_target';
+  $handler->display->display_options['fields']['field_ding_event_target']['field'] = 'field_ding_event_target';
+  $handler->display->display_options['fields']['field_ding_event_target']['label'] = 'target';
+  $handler->display->display_options['fields']['field_ding_event_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_target']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_target']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_ding_event_category']['id'] = 'field_ding_event_category';
+  $handler->display->display_options['fields']['field_ding_event_category']['table'] = 'field_data_field_ding_event_category';
+  $handler->display->display_options['fields']['field_ding_event_category']['field'] = 'field_ding_event_category';
+  $handler->display->display_options['fields']['field_ding_event_category']['label'] = 'category';
+  $handler->display->display_options['fields']['field_ding_event_category']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_category']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_category']['type'] = 'taxonomy_term_reference_plain';
+  /* Field: Content: Path */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = 'url';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['path']['absolute'] = TRUE;
   /* Sort criterion: Content: Date -  start date (field_ding_event_date) */
   $handler->display->display_options['sorts']['field_ding_event_date_value']['id'] = 'field_ding_event_date_value';
   $handler->display->display_options['sorts']['field_ding_event_date_value']['table'] = 'field_data_field_ding_event_date';
@@ -292,6 +315,9 @@ function ding_kultunaut_feed_views_default_views() {
     t('at phone'),
     t('list image'),
     t('long description'),
+    t('target'),
+    t('category'),
+    t('url'),
     t('Data export'),
   );
   $export['ding_kultunaut_feed'] = $view;
