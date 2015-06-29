@@ -232,6 +232,18 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = 'url';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['path']['absolute'] = TRUE;
+  /* Field: Content: Price */
+  $handler->display->display_options['fields']['field_ding_event_price']['id'] = 'field_ding_event_price';
+  $handler->display->display_options['fields']['field_ding_event_price']['table'] = 'field_data_field_ding_event_price';
+  $handler->display->display_options['fields']['field_ding_event_price']['field'] = 'field_ding_event_price';
+  $handler->display->display_options['fields']['field_ding_event_price']['label'] = 'price';
+  $handler->display->display_options['fields']['field_ding_event_price']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ding_event_price']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ding_event_price']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_ding_event_price']['settings'] = array(
+    'thousand_separator' => ',',
+    'prefix_suffix' => 1,
+  );
   /* Sort criterion: Content: Date -  start date (field_ding_event_date) */
   $handler->display->display_options['sorts']['field_ding_event_date_value']['id'] = 'field_ding_event_date_value';
   $handler->display->display_options['sorts']['field_ding_event_date_value']['table'] = 'field_data_field_ding_event_date';
@@ -318,6 +330,7 @@ function ding_kultunaut_feed_views_default_views() {
     t('target'),
     t('category'),
     t('url'),
+    t('price'),
     t('Data export'),
   );
   $export['ding_kultunaut_feed'] = $view;
