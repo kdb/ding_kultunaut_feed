@@ -241,7 +241,7 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_price']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_ding_event_price']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ding_event_price']['settings'] = array(
-    'thousand_separator' => ',',
+    'thousand_separator' => '.',
     'prefix_suffix' => 1,
   );
   /* Sort criterion: Content: Date -  start date (field_ding_event_date) */
