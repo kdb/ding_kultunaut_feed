@@ -270,6 +270,12 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['filters']['field_ding_event_date_value2']['form_type'] = 'date_text';
   $handler->display->display_options['filters']['field_ding_event_date_value2']['default_date'] = 'now';
   $handler->display->display_options['filters']['field_ding_event_date_value2']['year_range'] = '-0:+3';
+  /* Filter criterion: Content: Address - Locality (i.e. City) */
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['id'] = 'field_ding_library_addresse_locality';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['table'] = 'field_data_field_ding_library_addresse';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['field'] = 'field_ding_library_addresse_locality';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['operator'] = 'not empty';
 
   /* Display: Data export */
   $handler = $view->new_display('views_data_export', 'Data export', 'views_data_export_1');
