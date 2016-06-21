@@ -295,6 +295,88 @@ function ding_kultunaut_feed_views_default_views() {
     'field_ding_event_body' => 'field_ding_event_body',
   );
   $handler->display->display_options['path'] = 'kultunaut_export';
+
+  /* Display: Data export for library */
+  $handler = $view->new_display('views_data_export', 'Data export for library', 'views_data_export_2');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xml';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['transform'] = 1;
+  $handler->display->display_options['style_options']['transform_type'] = 'underline';
+  $handler->display->display_options['style_options']['root_node'] = 'activities';
+  $handler->display->display_options['style_options']['item_node'] = 'activity';
+  $handler->display->display_options['style_options']['no_entity_encode'] = array(
+    'field_ding_event_body' => 'field_ding_event_body',
+  );
+  $handler->display->display_options['style_options']['cdata_wrapper'] = array(
+    'field_ding_event_body' => 'field_ding_event_body',
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Slug (field_ding_library_slug) */
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['id'] = 'field_ding_library_slug_value';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['table'] = 'field_data_field_ding_library_slug';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['field'] = 'field_ding_library_slug_value';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_ding_library_slug_value']['limit'] = '0';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ding_event' => 'ding_event',
+  );
+  /* Filter criterion: Content: Date - end date (field_ding_event_date:value2) */
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['id'] = 'field_ding_event_date_value2';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['table'] = 'field_data_field_ding_event_date';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['field'] = 'field_ding_event_date_value2';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['form_type'] = 'date_text';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['default_date'] = 'now';
+  $handler->display->display_options['filters']['field_ding_event_date_value2']['year_range'] = '-0:+3';
+  /* Filter criterion: Content: Address - Locality (i.e. City) */
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['id'] = 'field_ding_library_addresse_locality';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['table'] = 'field_data_field_ding_library_addresse';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['field'] = 'field_ding_library_addresse_locality';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['filters']['field_ding_library_addresse_locality']['operator'] = 'not empty';
+  /* Filter criterion: Content: Slug (field_ding_library_slug) */
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['id'] = 'field_ding_library_slug_value';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['table'] = 'field_data_field_ding_library_slug';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['field'] = 'field_ding_library_slug_value';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['relationship'] = 'og_membership_related_node_group';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['operator_id'] = 'field_ding_library_slug_value_op';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['label'] = 'Slug (field_ding_library_slug)';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['operator'] = 'field_ding_library_slug_value_op';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['identifier'] = 'field_ding_library_slug_value';
+  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+    9 => 0,
+  );
+  $handler->display->display_options['path'] = 'kultunaut_export/%';
   $translatables['ding_kultunaut_feed'] = array(
     t('Master'),
     t('more'),
@@ -338,6 +420,9 @@ function ding_kultunaut_feed_views_default_views() {
     t('url'),
     t('price'),
     t('Data export'),
+    t('Data export for library'),
+    t('Alle'),
+    t('Slug (field_ding_library_slug)'),
   );
   $export['ding_kultunaut_feed'] = $view;
 

@@ -14,4 +14,4 @@ features[features_api][] = api:2
 features[variable][] = date_format_ding_kultunaut_feed_format
 features[views_view][] = ding_kultunaut_feed
 files[] = includes/views_handler_field_ding_kultunaut_feed_uid.inc
-mtime = 1464855851
+mtime = 1466499658
