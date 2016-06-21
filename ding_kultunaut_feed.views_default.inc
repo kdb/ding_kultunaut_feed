@@ -355,27 +355,6 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['filters']['field_ding_library_addresse_locality']['field'] = 'field_ding_library_addresse_locality';
   $handler->display->display_options['filters']['field_ding_library_addresse_locality']['relationship'] = 'og_membership_related_node_group';
   $handler->display->display_options['filters']['field_ding_library_addresse_locality']['operator'] = 'not empty';
-  /* Filter criterion: Content: Slug (field_ding_library_slug) */
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['id'] = 'field_ding_library_slug_value';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['table'] = 'field_data_field_ding_library_slug';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['field'] = 'field_ding_library_slug_value';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['relationship'] = 'og_membership_related_node_group';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['operator_id'] = 'field_ding_library_slug_value_op';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['label'] = 'Slug (field_ding_library_slug)';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['operator'] = 'field_ding_library_slug_value_op';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['identifier'] = 'field_ding_library_slug_value';
-  $handler->display->display_options['filters']['field_ding_library_slug_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-    7 => 0,
-    8 => 0,
-    9 => 0,
-  );
   $handler->display->display_options['path'] = 'kultunaut_export/%';
   $translatables['ding_kultunaut_feed'] = array(
     t('Master'),
@@ -422,7 +401,6 @@ function ding_kultunaut_feed_views_default_views() {
     t('Data export'),
     t('Data export for library'),
     t('Alle'),
-    t('Slug (field_ding_library_slug)'),
   );
   $export['ding_kultunaut_feed'] = $view;
 
