@@ -19,4 +19,4 @@ projects[views][version] = 3.7
 
 projects[views_data_export][type] = module
 projects[views_data_export][subdir] = contrib
-projects[views_data_export][version] = 3.0-beta7
+projects[views_data_export][version] = 3.2
