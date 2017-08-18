@@ -107,7 +107,7 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_date']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_date']['settings'] = array(
-    'format_type' => 'ding_date_only',
+    'format_type' => 'ding_kultunaut_feed_format',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -122,7 +122,7 @@ function ding_kultunaut_feed_views_default_views() {
   $handler->display->display_options['fields']['field_ding_event_date_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_date_1']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_ding_event_date_1']['settings'] = array(
-    'format_type' => 'ding_date_only',
+    'format_type' => 'ding_kultunaut_feed_format',
     'fromto' => 'value2',
     'multiple_number' => '',
     'multiple_from' => '',

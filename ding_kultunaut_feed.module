@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Code for the Ding Kultunaut Feed feature.
@@ -33,4 +34,26 @@ function ding_kultunaut_feed_views_post_render(&$view, &$output, &$cache) {
   // The left over ding_kultunaut_feed_duration tags most be spanning several
   // days.
   $output = preg_replace('/\<activity\>[^<]*\<ding_kultunaut_feed_duration\>(\d{4}-\d{2}-\d{2})[^!]*!(\d{4}-\d{2}-\d{2})[^<]*\<\/ding_kultunaut_feed_duration\>/si', '<activity type="flerdages">', $output);
+}
+
+/**
+ * Implements hook_date_formats().
+ */
+function ding_kultunaut_feed_date_formats() {
+  return array(
+    array(
+      'type' => 'ding_kultunaut_feed_format',
+      'format' => 'Y/m/d H:i:\\0\\0 T',
+      'locales' => array(),
+    ),
+  );
+}
+
+/**
+ * Implements hook_date_format_types().
+ */
+function ding_kultunaut_feed_date_format_types() {
+  return array(
+    'ding_kultunaut_feed_format' => t('Kultunaut feed format'),
+  );
 }
